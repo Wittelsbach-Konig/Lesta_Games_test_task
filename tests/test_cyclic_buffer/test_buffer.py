@@ -1,5 +1,5 @@
 class TestListBuffer:
-    """Тесты буффера, реализованного на листе."""
+    """Тесты буфера, реализованного на листе."""
 
     def test_push_pop_list(self, buffer_list):
         buffer_list.push(10)
@@ -46,7 +46,7 @@ class TestListBuffer:
 
 
 class TestDequeBuffer:
-    """Тесты буффера, реализованного на deque."""
+    """Тесты буфера, реализованного на deque."""
 
     def test_push_pop_deque(self, buffer_deque):
         buffer_deque.push(10)
