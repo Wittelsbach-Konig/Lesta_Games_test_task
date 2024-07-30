@@ -9,6 +9,7 @@ from sort_algorithm.other_sorts.heap_sort import heap_sort
 
 
 def is_sorted(array: List[int]) -> bool:
+    """Проверка является ли массив отсортированным."""
     return all(array[i] <= array[i+1] for i in range(len(array)-1))
 
 
@@ -21,6 +22,7 @@ def insert_sort(array: List[int]) -> None:
                       insert_sort, merge_sort, heap_sort]
     )
 def test_sorting_algorithms(sort_func):
+    """Тесты сортировок."""
     array = []
     sorted_array = array.copy()
     sort_func(sorted_array)

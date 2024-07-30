@@ -1,3 +1,4 @@
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 # Lesta_Games_test_task
 Тестовое задание для **Lesta Games**. Требуется на Python:
 
@@ -11,14 +12,16 @@
 
 ## Особенности реализации
 
-1. Проверка на четность была реализована с помощью логического AND.
+1. Проверка на четность была реализована с помощью побитового логического AND.
 2. Было реализовано 2 класса циклического буфера: с использованием List и Deque.
-3. Был предложен модифицированный алгоритм быстрой сортировки (Quick Sort). Построены графики для сравнения быстродействия разных сортировок.
+3. Был предложен модифицированный алгоритм быстрой сортировки (Quick Sort). Построены графики для сравнения быстродействия разных алгоритмов сортировки на трёх группах массивов разной длины.
 
 Подробное описание:
 * [Проверка чётности](even_check/README.md)
 * [Циклический буфер](cyclic_buffer_fifo/README.md)
 * [Сортировка](sort_algorithm/README.md)
+
+Для проверки соответствия кодстайлу использовался **flake8**, проверка аннотаций осуществлялась с помощью **mypy**, тесты написаны с помощью **pytest**.
 ## Установка
 1. Склонировать репозиторий:
 ```bash
@@ -37,36 +40,40 @@ pip install requirements.txt \
 source venv/bin/activate
 ```
 
-
+## Построить графики сравнения алгоритмов
+Находясь в виртуальном окружении:
+```bash
+python sort_testing.py
+```
 ## Структура проекта
 ```bash
     ├── LICENSE
     ├── README.md
     ├── charts
     │   └── sorts_comparison.png
-    ├── cyclic_buffer_fifo          <-- Директория с буфером
+    ├── cyclic_buffer_fifo
     │   ├── README.md
     │   ├── __init__.py
-    │   ├── cyclic_buffer_deque.py
-    │   └── cyclic_buffer_list.py
-    ├── even_check                  <-- Проверка на чётность
+    │   ├── cyclic_buffer_deque.py  <-- Буфер на deque
+    │   └── cyclic_buffer_list.py   <-- Буфер на листе
+    ├── even_check                  
     │   ├── README.md
     │   ├── __init__.py
-    │   └── even_check.py
+    │   └── even_check.py           <-- Проверка на чётность
     ├── poetry.lock
     ├── pyproject.toml
     ├── setup.cfg
-    ├── sort_algorithm              <-- Сортировка
+    ├── sort_algorithm
     │   ├── README.md
     │   ├── __init__.py
-    │   ├── optimized_quick_sort.py
+    │   ├── optimized_quick_sort.py <-- Улучшенная быстрая сортировка
     │   └── other_sorts
     │       ├── __init__.py
-    │       ├── basic_quick_sort.py
-    │       ├── heap_sort.py
-    │       └── merge_sort.py
-    ├── sort_testing.py
-    └── tests
+    │       ├── basic_quick_sort.py <-- Классическая быстрая сортировка
+    │       ├── heap_sort.py        <-- Пирамидальная сортировка
+    │       └── merge_sort.py       <-- Сортировка слиянием
+    ├── sort_testing.py             <-- Построение графиков
+    └── tests                       <-- Директория с тестами
         ├── __init__.py
         ├── test_cyclic_buffer
         │   ├── __init__.py
