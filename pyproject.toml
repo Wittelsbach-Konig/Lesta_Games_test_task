@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "lesta-games-test-task"
+version = "0.1.0"
+description = "Test task for Lesta Games"
+authors = ["Wittelsbach-Konig <kiryuschin.vitalij@yandex.ru>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+flake8 = "^7.1.0"
+mypy = "^1.11.0"
+numpy = "^2.0.1"
+matplotlib = "^3.9.1"
+pytest = "^8.3.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.mypy]
+enable_incomplete_feature = ["NewGenericSyntax"]
